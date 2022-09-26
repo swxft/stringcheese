@@ -1,0 +1,1 @@
+JavaScript string library
