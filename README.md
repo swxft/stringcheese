@@ -1,4 +1,5 @@
 JavaScript string library
+published under stringcheese-swxft ➡️ https://www.npmjs.com/package/stringcheese-swxft
 
 ## capitalize (str)
 > makes the first character of a given string uppercase.
