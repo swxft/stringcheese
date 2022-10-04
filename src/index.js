@@ -44,7 +44,7 @@ function removeExtraSpaces(str) {
 function kebobCase(str, seperator = '-') {
     const lower = str.toLowerCase()
     const chars = lower.split('')
-    filtered = chars.filter((character) => {
+    const filtered = chars.filter((character) => {
         const code = character.charCodeAt(0)
         //  character between a-z?
         if (code > 96 && code < 123) { 
@@ -68,14 +68,14 @@ const snakeCase = (str) => kebobCase(str, '_')
 //  7 
 const camelCase = (str) => {
     const wordArr = str.split(' ')
-    sentence = wordArr.map((word, index) => (index !== 0 ? capitalize(word) : word))
+    const sentence = wordArr.map((word, index) => (index !== 0 ? capitalize(word) : word))
     return sentence.join('')
 }
 //  8
 const shift = (str) => {
-    sentence = str.slice(1)
-    firstChar = str[0]
-    wordArr = sentence.split(' ')
+    const sentence = str.slice(1)
+    const firstChar = str[0]
+    const wordArr = sentence.split(' ')
     wordArr.push(firstChar)
     // console.log(wordArr)
     return(wordArr.join(' '))
@@ -112,3 +112,4 @@ const isEmpty = (str) => {
 // console.log(makeHashTag('I love King Julian'))
 // console.log(isEmpty('Abc def'))
 // console.log(isEmpty('     '))
+export {capitalize, allCaps, capitalizeWords, capitalizeHeadline, removeExtraSpaces, kebobCase, snakeCase, camelCase, shift, makeHashTag, isEmpty};
